@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 09</title>
+</head>
+<body>
+    <!-- BEM - БЛОК -->
+    <div class="bem-block bem-block--modifier">
+        <!-- BEM - елементи з модифікаторами -->
+        <div class="bem-block__element bem-block__element--padding"></div>
+        <h2 class="bem-block__title bem-block__title--green bem-block__title--size"></h2>
+        <a href="#" class="bem-block__link bem-block__link--decor">Link</a>
+    </div>
+
+    <!-- BEM - МІКС -->
+     <div class="contacts">
+        <!-- BEM - ЕЛЕМЕНТ ЯКИЙ Є ОКРЕМИМ BEM - БЛОКОМ ITEM -->
+        <div class="contacts__item item"></div>
+     </div>
+
+     <!-- Розгорнутий приклад BEM - МІКС -->
+      <div class="container">
+
+        <div class="container__body">
+
+            <div class="container__item item-block">
+                <h2 class="item-block__title">Я заголовок BEM - блоку .item-block</h2>
+                <a href="" class="item-block__link">Я посилання BEM - блоку .item-block</a>
+                <div class="item-block__image">
+                    <img src="#" alt="ALT атрибут зображення">
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+
+      <!-- Використання плагіну - помічника для написана BEM - структури -->
+      <header class="header">
+        <div class="header__container">
+            <div class="header__column header-column">
+                <div class="header-column__item">
+                    <h2 class="header-column__title">Header logo title</h2>
+                </div>
+            </div>
+        </div>
+      </header>
+
+</body>
+</html>

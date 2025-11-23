@@ -1,0 +1,378 @@
+@import url(reset.css);
+
+/* Локальне підключення шрифтів */
+@import url(fonts.css);
+
+body {
+    font-family: 'Manrope', 'Arial', sans-serif;
+}
+
+/* Limit container */
+.container {
+    width: 90%;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 50px 0;
+}
+
+/* Header */
+header {
+    padding: 30px 0;
+    background-color: #333333;
+}
+
+header li {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+header li:not(:last-child) {
+    margin-right: 15px;
+}
+
+header li a:hover {
+    text-decoration: underline;
+}
+
+/* Practice part */
+.content-block:not(:first-child) {
+    margin-top: 30px;
+}
+
+.content-block h1 {
+    font-size: 29px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.content-block h1 + p {
+    font-size: 17px;
+    font-style: italic;
+    text-align: center;
+}
+
+.content-block h2 {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.content-block h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Hover */
+.practice-area.hover .item {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+    cursor: pointer;
+    transition: background-color .3s linear, 
+                width .3s linear,
+                opacity .3s linear;
+}
+
+.practice-area.hover .item:nth-child(1) {
+    background-color: #0ad174a2;
+    
+}
+
+.practice-area.hover .item:nth-child(1):hover {
+    background-color: #067c45a2;
+    
+}
+
+.practice-area.hover .item:nth-child(2) {
+    background-color: #d6a609ad;
+}
+
+.practice-area.hover .item:nth-child(2):hover {
+    background-color: #9c7907ad;
+    width: 175px;
+}
+
+.practice-area.hover .item:nth-child(3) {
+    background-color: #0c0fd4a2;
+    opacity: .1;
+}
+
+.practice-area.hover .item:nth-child(3):hover {
+    opacity: 1;
+}
+
+/* Active */
+.practice-area.active > a {
+    display: inline-block;
+    font-size: 19px;
+}
+
+.practice-area.active > a:not(:last-child) {
+    margin-right: 30px;
+}
+
+.practice-area.active > a:nth-child(1):active {
+    color: #0000ff;
+}
+
+.practice-area.active > a:nth-child(2):active {
+    text-decoration: underline;
+}
+
+.practice-area.active > a:nth-child(3) {
+    background-color: #13bb13;
+    padding: 15px 25px;
+    border-radius: 25px;
+    color: #ffffff;
+    transition: background-color .3s linear;
+}
+
+.practice-area.active > a:nth-child(3):active {
+    background-color: #1f8f1f;
+}
+
+/* Visited */
+.practice-area.visited a {
+    font-size: 19px;
+    text-decoration: underline;
+}
+
+.practice-area.visited a:visited {
+    color: #0000ff;
+}
+
+/* Focus */
+.practice-area.focus a {
+    padding: 15px 25px;
+    background-color: #22ce64;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.practice-area.focus a:focus {
+    outline: 5px dashed #ffa500;
+}
+
+/* Target */
+.practice-area.target a {
+    font-size: 19px;
+    padding: 15px 30px;
+    background-color: rgb(33, 33, 233);
+    border-radius: 15px;
+    color: #ffffff;
+}
+
+.target-block {
+    width: 150px;
+    height: 150px;
+    background-color: #c2c50c;
+    opacity: .1;
+    transition: opacity .3s linear;
+    margin-top: 35px;
+}
+
+.target-block:target {
+    opacity: 1;
+}
+
+/* First-child */
+.practice-area.first-child .item {
+    background-color: #12a6eb;
+    width: 250px;
+    height: 175px;
+    display: inline-block;
+}
+
+.practice-area.first-child .item:first-child {
+    background-color: #97e20a;
+}
+
+/* First-of-type */
+.practice-area.first-type .item {
+    font-size: 19px;
+    display: inline-block;
+}
+
+.practice-area.first-type .item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.practice-area.first-type h3:first-of-type {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+/* Last-child */
+.practice-area.last-child .item {
+    width: 150px;
+    height: 150px;
+    background-color: #a924d1;
+    display: inline-block;
+}
+
+.practice-area.last-child .item:last-child {
+    background-color: #600de6;
+}
+
+/* Last-of-type */
+.practice-area.last-type .item {
+    font-size: 19px;
+    display: inline-block;
+}
+
+.practice-area.last-type .item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.practice-area.last-type p:last-of-type {
+    color: #12a6eb;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Nth-child */
+.practice-area.nth-child {
+    margin-bottom: 15px;
+}
+
+.practice-area.nth-child .item {
+    width: 195px;
+    height: 150px;
+    background-color: #61ce57;
+    display: inline-block;
+}
+
+.practice-area.nth-child .item:nth-child(2) {
+    background-color: #62d1ec;
+}
+
+.practice-area.odd {
+    margin-bottom: 15px;
+}
+
+.practice-area.odd .item {
+    width: 150px;
+    height: 150px;
+    background-color: #4eb693;
+    display: inline-block;
+}
+
+.practice-area.odd .item:nth-child(odd) {
+    background-color: #4c70bd;
+    width: 195px;
+}
+
+.practice-area.even .item {
+    width: 250px;
+    height: 150px;
+    background-color: #8344be;
+    display: inline-block;
+}
+
+.practice-area.even .item:nth-child(even) {
+    background-color: #e6449d;
+    border-radius: 15px;
+}
+
+/* Not */
+.practice-area.not .practice-content {
+    background-color: #5ec0e7;
+    padding: 15px 30px;
+}
+
+.practice-area.not .practice-content:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.practice-area.not .practice-content p {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.practice-area.not .practice-content p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* Has */
+.practice-area.has .item {
+    width: 350px;
+    height: 150px;
+    background-color: #e9b553;
+    text-align: center;
+}
+
+.practice-area.has .item:has(p) {
+    background-color: #4ff3f3;
+}
+
+/* Before and after */
+.practice-area.before-after p:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.practice-area.before-after p:nth-child(1)::before {
+    content: 'Before pseudo element - ';
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.practice-area.before-after p:nth-child(2)::after {
+    content: '- After pseudo element';
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.practice-area.before-after ul li {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.practice-area.before-after ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.practice-area.before-after ul li::before {
+    content: '';
+    background: url(../img/green-check.svg) 0 0 no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.practice-area.before-after ul li:nth-child(4)::before,
+.practice-area.before-after ul li:last-child::before {
+    background: url(../img/gray-check.svg);
+}
+
+.practice-area.before-after {
+    margin-top: 35px;
+}
+
+.practice-area.before-after a {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.practice-area.before-after a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #eeaf38;
+    display: block;
+    margin-top: 5px;
+    transition: width .3s linear;
+}
+
+.practice-area.before-after a:hover::after {
+    width: 100%;
+}

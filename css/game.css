@@ -1,0 +1,53 @@
+/* Обнулення стилів */
+@import url(reset.css);
+
+/*  Локальне підключення шрифтів */
+@import url(fonts.css);
+
+/* Game */
+.game-area {
+    background: url(../img/game/ChatGPT\ Image\ 11\ лист.\ 2025\ р.\,\ 23_42_15.png) 0 0 / contain no-repeat;
+    height: 500px;
+}
+
+
+/* Hover test */
+.hover-area {
+    background-color: rgba(255, 166, 0, 0.414);
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    gap: 0;
+}
+
+.hover-area .hover-item {
+    width: 100px;
+    height: 25px;
+    background-color: #ffffff;
+    border-radius: 9px;
+    display: inline-block;
+}
+
+.hover-area .hover-item:not(.start, .finish) {
+    visibility: hidden;
+}
+
+/* .hover-area .hover-item.start:hover + .item-1 {
+    visibility: visible;
+}
+
+.hover-area .item-1:hover,
+.hover-area .item-1:hover + .item-2 {
+    visibility: visible !important;
+}
+
+.hover-area .item-2:hover + .item-3 {
+    visibility: visible;
+} */
+
+.hover-area div[class*="item-"]:hover,
+.hover-area div[class*="item-"]:hover + div {
+    visibility: visible !important;
+    background-color: orange;
+}
